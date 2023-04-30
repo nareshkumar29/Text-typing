@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New';
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(41, 39, 39);
+    height: 100vh;
+    
+}
+.container{
+    color: rgb(7, 124, 34);
+    font-size: 30px;
+    font-weight: 600;
+    
+}
+span{
+    position: relative;
+}
+.container .text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(41, 39, 39);;
+    border-left: 5px solid green;
+    animation: animate 3s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
